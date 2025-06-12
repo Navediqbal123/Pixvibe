@@ -1,16 +1,22 @@
-
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    margin: 0;
-    padding: 20px;
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
-header {
-    background: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+header, footer {
+  padding: 1rem;
+  background: #1e1e1e;
 }
-main {
-    margin-top: 20px;
+a {
+  display: block;
+  color: #03a9f4;
+  margin: 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
