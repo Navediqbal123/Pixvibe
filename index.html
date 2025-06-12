@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pixvibe</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadhaar Image Tool</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark">
-  <header>
-    <h1>Pixvibe</h1>
-    <p>Image & Video Upscale | Aadhaar Auto-Crop</p>
-  </header>
-  <main>
-    <section>
-      <a href="image-upscale.html">Image Upscale</a>
-      <a href="video-upscale.html">Video Upscale</a>
-      <a href="aadhaar-crop.html">Aadhaar Auto-Crop</a>
-    </section>
-  </main>
-  <footer>
-    <p>Contact for Clients: Pixvibe97@gmail.com | 📞 +91-XXXXXXXXXX</p>
-  </footer>
+<body>
+    <div class="container">
+        <h1>Aadhaar Image Tool</h1>
+        <input type="file" id="fileInput">
+        <button onclick="processImage()">Process</button>
+        <a id="downloadLink" style="display:none;" download="result.png">Download Result</a>
+        <div id="preview"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
