@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aadhaar Image Tool</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pixvibe - AI Tools</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <div class="container">
-        <h1>Aadhaar Image Tool</h1>
-        <input type="file" id="fileInput">
-        <button onclick="processImage()">Process</button>
-        <a id="downloadLink" style="display:none;" download="result.png">Download Result</a>
-        <div id="preview"></div>
+  <div class="card">
+    <h1>Pixvibe - AI Image Tools</h1>
+    <input type="file" id="fileInput" accept="image/*"/>
+    <div id="preview"></div>
+    <div class="actions">
+      <button onclick="processImage()">Generate</button>
+      <button onclick="resetTool()">Regenerate</button>
+      <a id="downloadLink" download="output.png">Download</a>
     </div>
-    <script src="script.js"></script>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>

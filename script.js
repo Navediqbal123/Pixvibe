@@ -1,24 +1,27 @@
 function processImage() {
-    const input = document.getElementById('fileInput');
-    const link = document.getElementById('downloadLink');
-    const preview = document.getElementById('preview');
+  const fileInput = document.getElementById("fileInput");
+  const preview = document.getElementById("preview");
+  const downloadLink = document.getElementById("downloadLink");
 
-    if (input.files.length === 0) {
-        alert("Please select a file first.");
-        return;
-    }
+  if (!fileInput.files.length) {
+    alert("Please upload an image.");
+    return;
+  }
 
-    const file = input.files[0];
-    const reader = new FileReader();
-    reader.onload = function(event) {
-        const img = new Image();
-        img.src = event.target.result;
-        img.style.maxWidth = '100%';
-        preview.innerHTML = "";
-        preview.appendChild(img);
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const img = new Image();
+    img.src = e.target.result;
+    preview.innerHTML = "";
+    preview.appendChild(img);
+    downloadLink.href = e.target.result;
+    downloadLink.style.display = "inline-block";
+  };
+  reader.readAsDataURL(fileInput.files[0]);
+}
 
-        link.href = event.target.result;
-        link.style.display = 'inline-block';
-    }
-    reader.readAsDataURL(file);
+function resetTool() {
+  document.getElementById("fileInput").value = "";
+  document.getElementById("preview").innerHTML = "";
+  document.getElementById("downloadLink").style.display = "none";
 }
